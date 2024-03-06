@@ -10,15 +10,12 @@ class Payload:
         # self.target_port = 667
 
     def __str__(self):
-        return f"\nPlatform: {self.platform} {self.arch} - Length: {self.get_length()} - {self.get_bytes_size()} Bytes\nShellcode: {self.shellcode}"
+        return f"\nPlatform: {self.platform} {self.arch} - {self.get_bytes_size()} Bytes\nShellcode:\n{self.shellcode}"
 
     def permut(self):
         if self.platform == "Linux":
             for line in permut_list:
                     self.shellcode += line[randint(0,len(line)-1)]
 
-    def get_length(self):
-        return self.shellcode.count(r"\x")
-    
     def get_bytes_size(self):
-        return self.get_length()//2
+        return self.shellcode.count(r"\x")
