@@ -10,8 +10,8 @@ parser.add_argument("--port",help="Reverse connection Port")
 args = parser.parse_args()
 
 if args.linux:
-    print("Platform: Linux")
-    payload = Payload(platform="linux")
+    payload = Payload(platform="Linux")
+    payload.permut()
     print(payload)
 
     
